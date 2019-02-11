@@ -2,7 +2,7 @@
 
 namespace Synortix\NamesGenerator;
 
-class NamesGenerator
+final class NamesGenerator
 {
     const LEFT = [
         "admiring",
