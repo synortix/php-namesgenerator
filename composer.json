@@ -1,0 +1,20 @@
+{
+  "name": "synortix/php-namesgenerator",
+  "description": "Docker inspired names generator for PHP.",
+  "authors": [
+    {
+      "name": "Yaroslav Khortiuk",
+      "email": "17699384+devyk@users.noreply.github.com"
+    }
+  ],
+  "license": "MIT",
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^7.0",
+  },
+  "autoload": {
+    "psr-4": {
+      "Synortix\\NamesGenerator\\": "./src"
+    }
+  }
+}
