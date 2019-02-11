@@ -820,7 +820,7 @@ final class NamesGenerator
     // GetRandomName generates a random name from the list of adjectives and surnames in this package
     // formatted as "adjective_surname". For example 'focused_turing'. If retry is non-zero, a random
     // integer between 0 and 10 will be added to the end of the name, e.g `focused_turing3`
-    public function getRandomName(int $retry, string $delimiter = '_') : string
+    public function getRandomName(bool $retry, string $delimiter = '_') : string
     {
         begin:
         $name = sprintf("%s$delimiter%s", self::LEFT[rand(0, count(self::LEFT))], self::RIGHT[rand(0, count(self::RIGHT))]);
@@ -828,7 +828,7 @@ final class NamesGenerator
             goto begin;
         }
 
-        if ($retry > 0) {
+        if ($retry) {
             $name = sprintf("%s%d", $name, rand(0, 10));
         }
 

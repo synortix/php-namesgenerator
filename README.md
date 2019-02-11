@@ -19,25 +19,25 @@ composer require synortix/php-namesgenerator:1.*
 ### Default
 
 ```
-    use Synortix\NamesGenerator;
+    use Synortix\NamesGenerator\NamesGenerator;
     
     $generator = new NamesGenerator;
-    $generator->getRandomName()
+    $generator->getRandomName(false)
 ```
 
 ### Custom delimiter
 
 ```
-    use Synortix\NamesGenerator;
+    use Synortix\NamesGenerator\NamesGenerator;
     
     $generator = new NamesGenerator;
-    $generator->getRandomName(0, '\s');
+    $generator->getRandomName(false, ' ');
 ```
 
-### Random number
+### Append random number
 
 ```
-    use Synortix\NamesGenerator;
+    use Synortix\NamesGenerator\NamesGenerator;
     
     $generator = new NamesGenerator;
     $generator->getRandomName(true);
