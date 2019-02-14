@@ -823,7 +823,7 @@ final class NamesGenerator
     public function getRandomName(bool $retry, string $delimiter = '_') : string
     {
         begin:
-        $name = sprintf("%s$delimiter%s", self::LEFT[rand(0, count(self::LEFT))], self::RIGHT[rand(0, count(self::RIGHT))]);
+        $name = sprintf("%s$delimiter%s", self::LEFT[rand(0, count(self::LEFT)-1)], self::RIGHT[rand(0, count(self::RIGHT)-1)]);
         if ($name == "boring{$delimiter}wozniak") {
             goto begin;
         }
